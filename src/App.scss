@@ -1,0 +1,177 @@
+@import "~bootstrap/scss/bootstrap";
+@import './style/variables.scss';
+@import 'style/mixins.scss';
+
+
+// ============================Reset=====================================
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing:border-box
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+*:focus ,*:active{
+    outline: none;
+}
+// ============================General=====================================
+
+body{
+    background-image:url("./assets/imgs/bg.jpg") ;
+    @include bgImg();
+
+}
+p , h1,h2,h3,h4,h5{
+    color:#3e3d42;
+    margin: 0px;
+}
+p{
+    font-size: 1rem;
+}
+h2{
+    font-size: 2rem;   
+    text-align: center;
+}
+h3{
+    font-size: 1.8rem;
+}
+h4{
+    font-size: 1.5rem;
+}
+h5{
+    font-size: 1.2rem;
+}
+button , .btn-primary ,.btn{
+    background-color: $prColor;
+    color: white;
+    border: none;
+}
+ button:hover , button:active , button:focus ,.btn-primary:hover ,.btn-primary:focus 
+ ,.btn-primary:not(:disabled):not(.disabled):active:focus ,.btn:hover{
+    background-color: $btnhovercolor;
+    color: white;
+    border: none;
+box-shadow: none;
+}
+.btn:focus, .btn.focus{
+    box-shadow: none;
+}
+.bg{
+    background-color: white;
+}
+//Reset Bootsrap
+.mt-4, .my-4 {
+    margin-top: 2.5rem !important;
+}
+
+nav {
+    background-color: white;
+    padding: 2rem !important;
+}
+
+.dropdown.nav-item{
+    background-position: center;
+    background-size: cover;
+    background-repeat:  no-repeat;
+    
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+    margin: 0px 30px;
+}
+.navbar-light .navbar-brand{
+    color:$prColor;
+    font-weight: bold;
+    letter-spacing: -3px;
+    font-size: 2rem;
+}
+.dropdown.nav-item a{
+    font-weight: bold;
+
+}
+.dropdown-toggle:empty::after {
+    margin-left: 47px;
+    color: #7f7f7f;
+}
+.dropdown-menu{
+    top:100%
+}
+.navbar-brand a {
+    color:$prColor !important
+}
+.navbar-brand a:hover{
+    text-decoration: none;
+}
+.dropdown-item.active, .dropdown-item:active{
+    background-color: $prColor
+}
+
+.dropdown-item a{
+    color: $txtColor;
+}
+
+@media (min-width: 576px)
+{
+.modal-dialog {
+    max-width: 84%;
+
+}
+}
+// ============================Start=====================================
+.form-inline{
+    position: relative;
+    input.mr-sm-2{
+        padding: 2px 8px;
+        border-radius: $borderRadius;
+        border: 1px solid gray;
+    }
+  
+    #searchList{
+        position: absolute;
+        background-color: white;
+        padding: 17px 20px;
+        border-radius:$borderRadius;
+        top: 100%;
+        z-index: 10;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        box-shadow: 0px 2px 2px #c2c2c2;
+        width: 81%;
+        right: 11%;
+        li{
+            margin-top: 2px;
+            border-bottom: 1px solid #f4f5f5;
+            margin-bottom: 10px;
+
+            &:hover a{
+              color: $prColor
+            }
+            a:hover{
+text-decoration: none;
+            }
+            a{
+                color:$txtColor
+            }
+        }
+    }
+}
+.my-node-enter {
+    opacity: 0;
+  }
+  .my-node-enter-active {
+    opacity: 1;
+    transition: opacity 200ms;
+  }
+  .my-node-exit {
+    opacity: 1;
+  }
+  .my-node-exit-active {
+    opacity: 0;
+    transition: opacity 200ms;
+  }
+

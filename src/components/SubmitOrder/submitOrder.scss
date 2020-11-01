@@ -1,0 +1,51 @@
+@import "../../style/variables.scss";
+
+.disabled-btn {
+  cursor: not-allowed;
+  background-color: gray !important;
+  background-image: none;
+  box-shadow: none;
+  /* padding: 10px; */
+  background-clip: unset;
+}
+mark.submittotal {
+  color: $prColor;
+  font-size: 2rem;
+  padding-left: 10px;
+}
+.button:disabled span,
+.disabled-btn span {
+  color: white;
+  background: unset;
+  -webkit-text-fill-color: unset;
+}
+.button:disabled span svg *,
+.disabled-btn span svg * {
+  fill: white;
+}
+.onepdt {
+  form {
+    input {
+      background-color: white;
+      width: 100%;
+      padding: 5px;
+      border-bottom: 1px;
+      border: none;
+      border-bottom: 1px solid #dedede;
+      margin-bottom: 1.4rem;
+    }
+    a.getLocation {
+      text-decoration: underline;
+      cursor: pointer;
+      &:hover {
+        color: black;
+      }
+    }
+    span.error {
+      color: red;
+    }
+    button {
+      width: 100px !important;
+    }
+  }
+}

@@ -2,16 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import StateProvider  from './contexts/Store';
+import { StateProvider } from './redux/store.js';
+
 
 
 
 ReactDOM.render(
+  <StateProvider>
+
   <React.StrictMode>
-        <StateProvider > 
     <App />
-    </StateProvider >
-  </React.StrictMode>,
+  </React.StrictMode>
+  </StateProvider>
+,
   document.getElementById('root')
 );
 
